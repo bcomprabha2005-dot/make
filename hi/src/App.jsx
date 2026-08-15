@@ -3,7 +3,7 @@ import {useState} from"react";
 
 
 
-/*function App(){
+/*function App()
   return (
   <Table
   name="Prabha"
@@ -11,8 +11,8 @@ import {useState} from"react";
   course="react "
   />*/
 
-  function App(){
-    const[count,setcount]=useState(0);
+  /*function App(){
+    const [count,setcount]=useState(0);
     return(
       <div>
         <h1>{count}</h1>
@@ -29,8 +29,28 @@ import {useState} from"react";
         </button>
       </div>
     );
-  }
+  } */
   
 
+function App() {
+  const names = ["prabha", "priyanka", "madhu", "sam"];
 
-export default App
+  const [index, setIndex] = useState(0);
+
+  return (
+    <div>
+      <h1>{names[index]}</h1>
+
+      <button
+        onClick={() => setIndex(index + 1)}
+        disabled={index === names.length - 1}
+      >
+        Next Name
+      </button>
+    </div>
+  );
+}
+
+export default App;
+
+
